@@ -1,0 +1,213 @@
+
+section{
+    position: relative;
+    display: block;
+  }
+  .firstrow{
+    margin-left: 0;
+    margin-right: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .leftside{
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: -1;
+    flex: 0 0 66.66667%;
+      max-width: 66.66667%;
+  
+  }
+  .infosectionleft{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    width: 100%;
+    padding: 63px 20px;
+    background: #c7ddea;
+    
+  }
+  .infosectionleft button{
+    display: none;
+  }
+  .infosectionleft:hover button{
+   display: inline-block;
+  
+  }
+  .righttop button{
+    display: none;
+  }
+  .righttop:hover button{
+    display: inline-block;
+  }
+  .rightbottom button{
+    display: none;
+  }
+  .rightbottom:hover button{
+    display: inline-block;
+    transition: 5s;
+  }
+  .infoleft{
+    padding-left: 5%;
+  }
+  .decorateleft{
+    margin-top: 30px;
+  }
+  .longtextleft{
+    margin-top: 25px;
+    color: rgba(41, 50, 56, 0.7);
+  }
+  .buttonleft button{
+    margin-top: 25px;
+    overflow: hidden;
+  }
+  /* .showleft{
+    display: block;
+    font-size: 230px;
+    left: -26px;
+    top: -18px;
+    z-index: 1;
+    position: absolute;
+    font-weight: 900;
+    -webkit-text-stroke: 1px rgba(40, 44, 67, 0.24);
+    -webkit-text-stroke-width: 1px;
+    color: transparent;
+  } */
+  .infolright{
+    align-items: flex-start;
+    display: flex;
+  }
+    .infolright span {
+        /* margin-left: 30px; */
+        position: absolute;
+        margin-top: 6%;
+        color: black;
+        z-index: 1;
+        font-size: 24px;
+        margin-left: 12%;
+  }
+  .infolright img{
+    box-shadow: -14px 15px 16px 0px rgb(40 44 67 / 35%);
+    border-radius: 1.25rem;
+    margin-left: 35%;
+  
+  }
+  .rightside{
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+  }
+  .righttop{
+    display: flex;
+    background: #f17849;
+    padding: 17px 8px 35px 55px;
+    flex-direction: row-reverse;
+    text-align: left;
+    justify-content: center;
+  }
+  .righttopimg img{
+    box-shadow: -14px 15px 16px 0px rgb(40 44 67 / 35%);
+    border-radius: 1.25rem;
+  }
+  .righttopinfo{
+    margin-right: 25%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .righttopinfo .namerightt {
+    color: #ffffff;
+    font-size: 36px;
+  }
+  .rightbottom{
+    display: flex;
+    background: #fab131;
+    padding: 17px 8px 35px 55px;
+    flex-direction: row-reverse;
+    text-align: left;
+    justify-content: center;
+  }
+  .rightbottom img{
+    box-shadow: -14px 15px 16px 0px rgb(40 44 67 / 35%);
+    border-radius: 1.25rem;
+  }
+  .rightbottominfo{
+    margin-right: 25%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .rightbottominfo .namerightb{
+    color: #ffffff;
+    font-size: 36px;
+  }
+  .body-middle{
+    padding-top: 125px;
+    padding-bottom: 125px;
+  }
+  .bodymiddle{
+    margin-right: auto;
+      margin-left: auto;
+      padding-left: 15px;
+      padding-right: 15px;
+  }
+  .blockcenter{
+    font-size: 28px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  .elemtentsuppper{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 450ms ease-in-out;
+    color: #fab131;
+    font-family: "Oswald", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    
+      border-radius: 50%;
+      border: 2px solid #d8dae2;
+  }
+  .elemtentsuppper:hover{
+    background: linear-gradient(
+  -45deg, #fab131 0%, #f17849);
+    color: #d8dae2;
+    width: 120px;
+    height: 120px;
+    transition: 0.3s ease-in-out;
+  }
+  .circleevetns{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 60px;
+  }
+  .elements{
+    margin-right: 25px;
+  }
+  .elementsbottom{
+    margin-top: 20px;
+  }
+  .elementsbottom h5{
+  
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .elementsbottom hr{
+    margin-top: 30px;
+    background: #83b4d0;
+    height: 3px;
+    max-width: 80px;
+   margin: auto;
+   margin-bottom: 5%;
+  }
+  .elementsbottom p{
+    text-align: center;
+    padding: 0 15%;
+  }

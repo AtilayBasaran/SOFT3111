@@ -10,16 +10,16 @@ body {
 	height: 100vh;
 }
 
-h1 {
+.newcontainer h1 {
 	font-weight: bold;
 	margin: 0;
 }
 
-h2 {
+.newcontainer h2 {
 	text-align: center;
 }
 
-p {
+.newcontainer p {
 	font-size: 14px;
 	font-weight: 100;
 	line-height: 20px;
@@ -27,18 +27,18 @@ p {
 	margin: 20px 0 30px;
 }
 
-span {
+.newcontainer span {
 	font-size: 12px;
 }
 
-a {
+.newcontainer a {
 	color: #333;
 	font-size: 14px;
 	text-decoration: none;
 	margin: 15px 0;
 }
 
-button {
+.newcontainer button {
 	border-radius: 20px;
 	border: 1px solid #FF4B2B;
 	background-color: #FF4B2B;
@@ -51,20 +51,20 @@ button {
 	transition: transform 80ms ease-in;
 }
 
-button:active {
+.newcontainer button:active {
 	transform: scale(0.95);
 }
 
-button:focus {
+.newcontainer button:focus {
 	outline: none;
 }
 
-button.ghost {
+.newcontainer button.ghost {
 	background-color: transparent;
 	border-color: #FFFFFF;
 }
 
-#login_form {
+.newcontainer #login_form {
 	background-color: #FFFFFF;
 	display: flex;
 	align-items: center;
@@ -77,7 +77,7 @@ button.ghost {
 
 
 
-input {
+.newcontainer input {
 	background-color: #eee;
 	border: none;
 	padding: 12px 15px;
@@ -95,9 +95,9 @@ input {
 			0 10px 10px rgba(0,0,0,0.22);
 	position: relative;
 	overflow: hidden;
-	width: 768px;
+	width: 850px;
 	max-width: 100%;
-	min-height: 480px;
+	min-height: 550px;
 }
 
 .form-container {

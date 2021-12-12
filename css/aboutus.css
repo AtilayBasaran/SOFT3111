@@ -1,0 +1,90 @@
+section{
+    padding-top: 125px;
+    padding-bottom: 125px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.photo {
+    text-align: center;
+    padding: 5% 0%;
+    background-image: url(./images/Screenshot_3.jpg);
+    font-size: 46px;
+    color: #f2f3f9;
+}
+.containeraboutus{
+    display: flex;
+    justify-content: center;
+    width: 1650px;
+}
+.containerleft{
+    margin-right: 5%;
+}
+.aboutus h2{
+ color: black;
+}
+.divider{
+    margin: 30px 0;
+    width: 30%;
+}
+.firstinfo {
+    color: #06141e;
+    font-size: 27px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.containerleftinfor h3{
+    font-weight: bold;
+    font-size: 48px;
+    color: #0f3550;
+}
+.containeroffer{
+    display: flex;
+    flex-direction: column;
+}
+.containerinfotop{
+    display: flex;
+}
+.containerinfobottom{
+    display: flex;
+}
+
+.allinfo h3{
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 36px;
+}
+.allinfo hr{
+    width: 30%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.row-row-6{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    margin-bottom: 5%;
+    margin-right: 2%;
+    margin-left: 2%;
+    margin-top: 3%;
+    border-radius: 1.25rem;
+    min-height: 300px;
+}
+.row-row-6 p{
+    width: 80%;
+    color: #24252b;
+}
+.row-row-6 i{
+    font-size: 64px;
+    
+}
+.row-row-6 h6{
+    font-size: 28px;
+    margin-bottom: 6%;
+}
+.row-row-6 .iconshowinfo{
+    margin-bottom: 5%;
+    margin-top: 2%;
+}
