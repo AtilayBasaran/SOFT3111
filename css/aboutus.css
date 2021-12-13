@@ -74,7 +74,8 @@ section{
 }
 .row-row-6 p{
     width: 80%;
-    color: #24252b;
+    color: #4a4b4d;
+    font-weight: 100;
 }
 .row-row-6 i{
     font-size: 64px;
@@ -85,6 +86,18 @@ section{
     margin-bottom: 6%;
 }
 .row-row-6 .iconshowinfo{
-    margin-bottom: 5%;
-    margin-top: 2%;
+    background-color:  #f17849;
+            color: white;
+            border-radius: 37%;
+            padding: 14px;
+            position: relative;
+            top: -45px;
+}
+.row-row-6 .iconshowinfo:hover{
+    background-color: 
+        #91482c;
+        -webkit-transition: background 1000ms linear;
+        -ms-transition: background 1000ms linear;
+        transition: background 0.3s linear;
+        
 }
