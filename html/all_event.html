@@ -57,19 +57,19 @@
         </div>
         <div class="fae">
             <div class="filter">
-                <form method="POST" action="/filterEvent/event" style="border: solid 2px #d2d2d2;
+                <form method="POST" action="" style="border: solid 4px #d2d2d2;
             border-radius: 40px; height: 25rem;">
                     <div class="etkinlik-arama">
                         <label><b>Etkinlik ara</b></label>
-                        <input type="text" name="EventName" placeholder="Etkinlik ara">
+                        <input type="text" name="EventName" placeholder="Etkinlik ara" style="border: solid 2px #d2d2d2">
                     </div>
                     <div class="tarih-secme">
                         <label><b>Tarih seçiniz</b></label>
-                        <input type="date" name="EventDate">
+                        <input type="date" name="EventDate" style="border: solid 2px #d2d2d2">
                     </div>
-                    <div class="sehir-secme">
+                    <div class="sehir-secme" >
                         <b>Şehir seçiniz</b>
-                        <select name="EventCity">
+                        <select name="EventCity" style="border: solid 2px #d2d2d2">
                             <div class="scroll" style="size: 5;">
                                 <label for="city"></label>
                                 <option></option>
@@ -98,17 +98,17 @@
                     </div>
                     <div class="sehir-secme">
                         <b>Kategori seçiniz</b>
-                        <select name="EventCategory">
+                        <select name="EventCategory" style="border: solid 2px #d2d2d2">
                             <label for="kategori"></label>
                             <option></option>
                             <option>Müzik</option>
                             <option>Spor</option>
                             <option>Tiyatro</option>
-                            <option>Teknoloji</option>
+                            <option>Konuşmalar</option>
                         </select>
                     </div>
                     <br>
-                    <button type="submit">
+                    <button type="submit" class="filter_button">
                         Filtrele
                     </button>
                 </form>

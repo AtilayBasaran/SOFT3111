@@ -10,6 +10,16 @@
 
 }
 
+.filter_button{
+    background-color: #fab131;
+    line-height: 50px;
+    height: 50px;
+    text-align: center;
+    width: 200px;
+    cursor: pointer;
+    margin: auto;
+}
+
 .event-part {
     display: flex;
     flex-direction: column;
