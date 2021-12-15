@@ -116,6 +116,15 @@ label.logo{
   color: #f17849;
   transition: 0.4s;
 }
+.bottomnavbar label a{
+  text-decoration: none;
+    color: black;
+    background: -webkit-linear-gradient(#e12121, #fab131);
+    -webkit-background-clip: text;
+    font-size: 38px;
+    -webkit-text-fill-color: transparent;
+}
+
 /* Body */
 
 /*Footer */
@@ -261,4 +270,59 @@ input[type=text]{
 }
 .Contact p{
   padding-bottom: 10px;
+}
+@media only screen and (max-width: 1050px) {
+  .bottomnavbar .form{
+    width: 0;
+  }
+  .bottomnavbar .form input{
+    display: none;
+  }
+  .bottomnavbar .form button{
+    display: none;
+  }
+}
+@media only screen and (max-width:650px) {
+  .bottomnavbar .logo{
+    padding: 0 0 0 20px;
+  }
+}
+@media only screen and (max-width:500px) {
+  .bottomnavbar  {
+    flex-direction: column;
+    height: 120px;
+  }
+  .bottomnavbar .logo{
+    padding: 0;
+  }
+  .bottomnavbar ul{
+    margin-right: 0;
+  }
+  .bottomnavbar ul li a{
+    padding-top: 0;
+  }
+}
+@media only screen and (max-width: 1250px) {
+  footer{
+    padding: 40px;
+  }
+}
+@media only screen and (max-width: 720px) {
+  footer .container{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  footer{
+    padding:20px 0;
+  }
+  footer .container .section{
+    width: 70%;
+    margin-bottom: 3%;
+  }
+  footer .container .section.aboutus{
+    width: 70%;
+  }
+
 }

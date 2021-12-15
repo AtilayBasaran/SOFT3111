@@ -291,7 +291,7 @@ section{
   border-radius: 1.25rem;
 }
 .prodcut img{
-  width: 22rem;
+  width: 90%;
   margin-top: 3%;
   border-radius: 1.25rem;
   margin-bottom: 2%;
@@ -413,4 +413,27 @@ section{
         cursor: pointer;
         font-size: 24px;
         
+}
+@media only screen and (max-width: 1750px) {
+  .infolright img{
+   margin-left:20%
+  }
+}
+@media only screen and (max-width: 1600px) {
+  .infolright img{
+   margin-left:2%
+  }
+}
+@media only screen and (max-width: 1500px) {
+  .righttopinfo {
+   margin-right:2% !important;
+  }
+  .rightbottominfo {
+    margin-right:2% !important;
+  }
+}
+@media only screen and (max-width: 1250px) {
+  .prodcut{
+    width: 15rem;
+  }
 }
