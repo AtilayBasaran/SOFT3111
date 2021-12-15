@@ -271,7 +271,7 @@ input[type=text]{
 .Contact p{
   padding-bottom: 10px;
 }
-@media only screen and (max-width: 1050px) {
+@media only screen and (max-width: 1100px) {
   .bottomnavbar .form{
     width: 0;
   }
@@ -282,12 +282,12 @@ input[type=text]{
     display: none;
   }
 }
-@media only screen and (max-width:650px) {
+@media only screen and (max-width:700px) {
   .bottomnavbar .logo{
     padding: 0 0 0 20px;
   }
 }
-@media only screen and (max-width:500px) {
+@media only screen and (max-width:515px) {
   .bottomnavbar  {
     flex-direction: column;
     height: 120px;
@@ -324,5 +324,40 @@ input[type=text]{
   footer .container .section.aboutus{
     width: 70%;
   }
+  footer .aboutus{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  footer .aboutus .sci{
+    justify-content: center;
+  }
+  footer .Navigation{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  footer .Navigation ul li a::before{
+    content: none;
+  }
+  footer .Navigation ul li{
+    padding: 0;
+  }
+  footer .Contact {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
 
+}
+@media only screen and (max-width: 450px) {
+  .topnavbar{
+    justify-content: flex-start;
+  }
+  .topnavbar ul{
+    margin: 0;
+  }
+  .topnavbar ul li a{
+    padding: 0 4px;
+  }
 }
