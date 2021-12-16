@@ -29,6 +29,7 @@
     border-radius: 1.175rem;
     border: 1px solid;
     padding: 1px 0 35px 0;
+    width: 40%;
   }
   .ticketpart {
     display: flex;
@@ -40,11 +41,11 @@
     flex-direction: column;
     background-color: aliceblue;
     border: 1px solid;
-    width: 100rem;
+    width: 100%;
     max-height: 80%;
   }
   .profilepart img {
-    width: 25.8rem;
+    width: 100%;
     margin: 4rem 2rem 2rem 2rem;
     border-radius: 20%;
   }
@@ -142,9 +143,32 @@
   .scroll{
     overflow: scroll;
     max-height: 65rem;
-    width: 65rem;
+    width: 100%;
   }
 .midpage{
     margin-left: 5%;
     margin-right: 5%;
 }  
+@media only screen and (max-width: 1250px) {
+  .profilecontainer{
+    flex-direction: column;
+  }
+  .profilepart{
+    margin-bottom: 5%;
+    width: 50%;
+  }
+  .rez-but{
+    width: 4rem;
+  }
+  #midpage{
+    padding: 10px;
+  }
+  .ticketpart{
+    margin-left: 0;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .profilepart{
+    width: 80%;
+  }
+}

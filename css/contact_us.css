@@ -13,7 +13,7 @@
  margin-bottom: 2%;
 }
 .outside-wrap{
-    max-width: 1500px;
+  width: 75%;
     margin-right: auto;
     margin-left: auto;
     padding-left: 15px;
@@ -36,7 +36,15 @@
     flex-direction: column;
     flex:  0 0 50%;
     width: 50%;
+    justify-content: center;
+   
     
+    
+}
+.form-wrap{
+    background-color: #e7f0f5;
+    border-radius: 1.25rem;
+    padding: 5%;
 }
 .col-md-6 label{
     margin: 10px 0 10px 30px;
@@ -123,4 +131,54 @@ width: 60%;
 }
 .word span{
     margin-right: 20px;
+}
+@media only screen and (max-width: 900px) {
+    .inside-wrap{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .leftsideinfo{
+        max-width: 100%;
+    }
+    .rightsideinfo{
+        width: 100% !important;
+        margin-top: 5%;
+    }
+    section{
+        height: auto !important;
+    }
+    .col-sm-10{
+        margin-bottom: 4%;
+    }
+    .buttonbottom{
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+    .outside-wrap{
+        width: 100%;
+    }
+  }
+  @media only screen and (max-width: 900px) {
+   .topside{
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+   }
+   .bottomsideform{
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+   }
+   .leftsideinfo{
+       max-width: 75%;
+   }
+   .col-md-6{
+       width: 100%;
+   }
+
+
 }

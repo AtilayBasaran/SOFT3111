@@ -16,10 +16,11 @@ section{
 .containeraboutus{
     display: flex;
     justify-content: center;
-    width: 1650px;
+    width: 75%;
 }
 .containerleft{
     margin-right: 5%;
+    width: 50%;
 }
 .aboutus h2{
  color: black;
@@ -49,6 +50,12 @@ section{
 .containerinfobottom{
     display: flex;
 }
+.containeright{
+    width: 50%;
+}
+.containeright img{
+    width: 100%;
+}
 
 .allinfo h3{
     text-align: center;
@@ -58,7 +65,7 @@ section{
 .allinfo hr{
     width: 30%;
     margin: auto;
-    margin-bottom: 20px;
+    margin-bottom: 5%;
 }
 .row-row-6{
     display: flex;
@@ -101,3 +108,40 @@ section{
         transition: background 0.3s linear;
         
 }
+@media only screen and (max-width: 900px) {
+    .containeraboutus{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .containeright{
+        margin-top: 50px;
+        width: 100%;
+    }
+    .divider{
+        margin: auto;
+    }
+    .containerleft{
+        width: 100%;
+    }
+    .containeroffer{
+        display: flex;
+        flex-direction: row;
+    }
+    .containerinfotop{
+        flex-direction: column;
+    }
+    .containerinfobottom{
+        flex-direction: column;
+    }
+    .allinfo hr{
+        margin-bottom: 10%;
+    }
+  }
+  @media only screen and (max-width: 500px) {
+    .allinfo hr{
+        margin-bottom: 20%;
+    }
+  }
