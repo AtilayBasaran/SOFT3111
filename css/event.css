@@ -68,7 +68,7 @@
     flex-direction: column;
     flex-wrap: wrap;
     font-family: 'Open Sans Condensed', sans-serif;
-    padding-left: 20px;
+    padding-left: 4%;
 }
 
 div[class*=box] {
