@@ -1,0 +1,88 @@
+.container{
+    height: 75vh;
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.container h5{
+    text-align: center;
+    margin-bottom: 5%;
+    font-size: 44px;
+   
+}
+.subcontianer{
+    display: flex;
+    flex-direction: row;
+
+}
+.accordion{
+    width: 100%;
+    padding: 0 5px;
+    border-top: 1px solid #666;
+    cursor: pointer;
+    display: flex;
+    margin: 10px 0;
+    align-items: center;
+
+}
+.left{
+    margin-right: 3%;
+}
+.right{
+    margin-left: 3%;
+}
+.accordion .icon{
+    margin: 5px 10px 0 0;
+    width: 10%;
+    height: 30px;
+    background: url(/css/images/icons8-plus-+-24.png) no-repeat 2px 3px ;
+    border-radius: 50%;
+    float: left;
+    transition: all .5s ease-in;
+}
+.accordion h6{
+    font-size: 22px;
+    margin: 0;
+    padding: 3px 0 0 0;
+    font-weight: normal;
+    color: #1f5c9a;
+}
+.panel{
+    padding: 0 15px;
+    border-left: 1px solid #6db5ff;
+    margin-left: 25px;
+    font-size: 14px;
+    text-align: justify;
+    overflow: hidden;
+    max-height: 0;
+    transition: all .5s ease-in;
+}
+.active .icon{
+    background: url(/css/images/icons8-minus-24.png) no-repeat 2px 3px ;
+}
+.active{
+    background: linear-gradient(to right, #435972, #293238);
+    color: #fff;
+}
+.active h6{
+color: #fff;
+}
+.accordion{
+    margin-bottom: 3%;
+}
+@media only screen and (max-width: 750px) {
+    .subcontianer{
+      flex-direction: column;
+    }
+    .right{
+        margin-left: 0;
+    }
+     .container{
+        height: auto;
+    margin-bottom: 10%;
+    margin-top: 10%;
+    }
+  }

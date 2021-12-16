@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/stylee.css">
+    <link rel="stylesheet" href="/css/categories.css">
+    <link rel="stylesheet" href="/css/workflow.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <title>CategoryPage</title>
+    <script src="/mainspageslider.js"></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="navbar">
+            <div class="topnavbar">
+                <ul>
+                    <li>
+                        <a href="/html/sport.html">Spor</a>
+                        <a href="/html/theatre.html">Tiyatro</a>
+                        <a href="/html/theatre.html">Müzik</a>
+                        <a href="/html/categories.html">Tüm kategoriler</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="bottomnavbar">
+                <label style="display: flex; align-items: center; justify-content: center" class="logo"><a
+                        style="text-decoration: none; color: black" href="/html/index.html">COBADO</a>
+                </label>
+                <div class="form">
+                    <input type="text" id="Search" name="Search" placeholder="Search" />
+                    <button type="submit">Ara</button>
+                </div>
+                <ul>
+                    <li>
+                        <a href="/html/index.html">Anasayfa</a>
+                        <a href="/html/all_event.html">Etkinlikler</a>
+                        <a href="/html/login.html"><i style="margin-right: 5px" class="far fa-user" aria-hidden="true"></i>
+                            Giris Yap</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- End Header -->
+    <!--Middle part-->
+    <section id="middle">
+        <div class="banner">
+            <div class="carousel">
+                <ul>
+                    <li>
+                        <h1 class="title">Spor</h1>
+                        <a href="/html/sport.html">
+                        <img src="/css/images/vettel.png" alt="">
+                    </a>
+                    </li>
+                    <li>
+                        <h1 class="title">Tiyatro</h1>
+                        <a href="/html/theatre.html">
+                        <img src="/css/images/vettel.png" alt="">
+                    </a>
+                    </li>
+                    <li>
+                        <h1 class="title">Müzik</h1>
+                        <a href="/html/music.html">
+                        <img src="/css/images/vettel.png" alt="">
+                    </a>
+                    </li>
+                    <li>
+                        <h1 class="title">Konuşmalar</h1>
+                        <a href="/html/talk.html">
+                        <img src="/css/images/vettel.png" alt="">
+                    </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!--End middle part-->
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="section aboutus">
+                <h2>Biz Kimiz</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
+                    animi ea dolorum minima? Maiores corporis quisquam, perferendis
+                    pariatur sit laudantium?
+                </p>
+                <ul class="sci">
+                    <li>
+                        <a href="https://www.google.com/"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.google.com/"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.google.com/"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                    </li>
+                </ul>
+                <p style="font-size: 14px; padding-top: 20px">
+                    2021 COBADO.Bütün hakları Gizlidir
+                </p>
+            </div>
+            <div class="section Navigation">
+                <h2>Navigasyon</h2>
+                <ul>
+                    <li><a href="/html/about_us.html">Hakkımızda</a></li>
+                    <li><a href="/html/FAQ.html">Sıkça Sorulanlar</a></li>
+                    <li><a href="/html/security.html">Gizlilik Politikası</a></li>
+                    <li><a href="/html/contact_us.html">Bize Ulaşın</a></li>
+                </ul>
+            </div>
+            <div class="section Contact">
+                <h2>Haberdar olun</h2>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit,
+                    ducimus.
+                </p>
+                <form action="">
+                    <input type="text" id="Email" name="Email" placeholder="Email Giriniz" />
+                    <input type="submit" value="Gönder" />
+                </form>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer Section -->
+    <script src="/css/hb.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/css/workflow.js"></script>
+    <script>
+        $(".carousel").flipster({
+            style: "carousel",
+            spacing: -0.3
+        });
+    </script>
+</body>
+
+</html>
