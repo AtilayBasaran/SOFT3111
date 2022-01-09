@@ -198,7 +198,7 @@ namespace COBADO.Controllers
         }
         public IActionResult successPage()
         {
-            return View();
+            return View("succcesPage");
         }
         public IActionResult talk()
         {
