@@ -208,6 +208,20 @@ namespace COBADO.Controllers
         {
             return View();
         }
+        public IActionResult notFound()
+        {
+            return View("404Page");
+        }
+
+        public IActionResult successLogin()
+        {
+            return View();
+        }
+
+        public IActionResult filterEvent()
+        {
+            return View();
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
