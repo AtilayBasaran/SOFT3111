@@ -34,7 +34,7 @@ namespace COBADO.Controllers
             }
             else
             {
-                ViewBag.message = "You are not reegistered";
+                ViewBag.message = "You are not registered";
             }
             return View();
         }
@@ -58,7 +58,27 @@ namespace COBADO.Controllers
         }
         public IActionResult all_event()
         {
-            return View();
+            string connectionString = "data source=DESKTOP-GNF0LHR; database=ticketsell; integrated security=SSPI;";
+            SqlConnection connection = new SqlConnection(connectionString);
+
+            String sql = "select EventId,EventName,EventPhoto from fasticket.events ";
+
+            SqlCommand cmd = new SqlCommand(sql, connection);
+
+            connection.Open();
+
+            List<AllEvent> eventModel = new List<AllEvent>();
+            SqlDataReader rdr = cmd.ExecuteReader();
+
+            while (rdr.Read())
+            {
+                var allevent = new AllEvent();
+                allevent.EventName = rdr[1].ToString();
+                allevent.EventPhoto = rdr[2].ToString();
+                allevent.EventID = Int16.Parse(rdr[0].ToString());
+                eventModel.Add(allevent);
+            }
+            return View("all_event",eventModel);
         }
         public IActionResult buy_page()
         {
@@ -74,9 +94,38 @@ namespace COBADO.Controllers
             Console.WriteLine(denemeee);
             return View();
         }
-        public IActionResult events()
+
+        [Route("/Home/events/{eventID:int}")]
+        public IActionResult events(int eventID)
         {
-            return View();
+             string connectionString = "data source=DESKTOP-GNF0LHR; database=ticketsell; integrated security=SSPI;";
+             SqlConnection connection = new SqlConnection(connectionString);
+
+             String sql = "select e.EventName,e.EventPhoto,e.EventDate,e.EventSummary,e.EventFull,e.EventUrl,p.place_address from fasticket.events e inner join fasticket.place p on e.place_id = p.place_id where e.EventID ='" + eventID + "'";
+
+             SqlCommand cmd = new SqlCommand(sql, connection);
+
+             connection.Open();
+
+             List<eventDetail> event_detail_Model = new List<eventDetail>();
+             SqlDataReader rdr = cmd.ExecuteReader();
+
+             while (rdr.Read())
+             {
+                 var event_detail = new eventDetail();
+                event_detail.EventName = rdr[0].ToString();
+                event_detail.PhotoUrl = rdr[1].ToString();
+                event_detail.EventDate = rdr[2].ToString();
+                event_detail.EventSummary = rdr[3].ToString();
+                event_detail.EventFull = rdr[4].ToString();
+                event_detail.videoUrl = rdr[5].ToString();
+                event_detail.EventPlace = rdr[6].ToString();
+                event_detail.EventID = eventID;
+                event_detail_Model.Add(event_detail);
+             }
+
+            Console.WriteLine(eventID);
+            return View("events", event_detail_Model);
         }
         public IActionResult FAQ()
         {

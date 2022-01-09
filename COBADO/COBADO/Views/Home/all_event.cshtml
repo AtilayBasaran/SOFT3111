@@ -122,18 +122,24 @@
                 </form>
             </div>
             <div class="flex">
+
                 <div class="events">
-                    <div class="event">
+                    @model IEnumerable<AllEvent>
+                    @foreach (var item in Model)
+                {
+                            <div class="event">
                         <div class="event-image">
                             <a href="/Home/events">
-                                <img class="img-event" src="/css/images/vettel.png">
+                                <img class="img-event" src="@item.EventPhoto">
                             </a>
                         </div>
                         <div class="event-text">
-                            <a href="" class="link-text">
+                            <a href="/Home/events/@item.EventID" class="link-text">
+                                <p>@item.EventName</p>
                             </a>
                         </div>
                     </div>
+                }
                 </div>
             </div>
         </div>
