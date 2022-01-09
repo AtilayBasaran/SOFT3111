@@ -65,7 +65,7 @@
         </div>
         <div class="fae">
             <div class="filter">
-                <form method="POST" action="" style="border: solid 4px #d2d2d2;
+                <form method="POST" action="/Home/filterr" style="border: solid 4px #d2d2d2;
             border-radius: 40px; height: 25rem;">
                     <div class="etkinlik-arama">
                         <label><b>Etkinlik ara</b></label>
@@ -129,7 +129,7 @@
                 {
                             <div class="event">
                         <div class="event-image">
-                            <a href="/Home/events">
+                            <a href="/Home/events/@item.EventID">
                                 <img class="img-event" src="@item.EventPhoto">
                             </a>
                         </div>

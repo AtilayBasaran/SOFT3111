@@ -183,7 +183,7 @@ namespace COBADO.Controllers
                 //             --------------------------------------- SQL Queries -------------------------------------------
                 String sql = "select role,firstname,lastname,email from fasticket.users where email='" + usermail + "'";
                 String sql_ticket = "select t.ticket_id, e.EventName from fasticket.ticket t inner join fasticket.events e on t.event_id = EventID where t.user_id ='" + user_id + "'";
-                // -----------------------------------------------------------------------------------------------------------
+                //             -----------------------------------------------------------------------------------------------
 
                 SqlCommand cmd = new SqlCommand(sql, connection);
                 SqlCommand ticket_cmd = new SqlCommand(sql_ticket, connection2);
