@@ -1,0 +1,179 @@
+@using COBADO.Models
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/css/stylee.css" />
+  <link rel="stylesheet" href="/css/payment.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+  <title>Website</title>
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <div class="navbar">
+      <div class="topnavbar">
+        <ul>
+          <li>
+            <a href="/Home/sport">Spor</a>
+            <a href="/Home/theatre">Tiyatro</a>
+            <a href="/Home/theatre">Müzik</a>
+            <a href="/Home/categories">Tüm kategoriler</a>
+          </li>
+        </ul>
+      </div>
+      <div class="bottomnavbar">
+        <label style="display: flex; align-items: center; justify-content: center" class="logo"><a
+            style="text-decoration: none; color: black" href="/Home/index">COBADO</a>
+        </label>
+        <div class="form">
+                <form method="POST" action="bar" style="display: flex;flex-direction: row;width: 80%;margin-top: 10px;justify-content: center;">
+                <input type="text" id="EventName" name="EventName" placeholder="Search" />
+                <button type="submit">Ara</button>
+                </form>
+            </div>
+        <ul>
+          <li>
+            <a href="/Home/index">Anasayfa</a>
+            <a href="/Home/all_event">Etkinlikler</a>
+            @{
+                    if (Context.Request.Cookies["name"] != null)
+                {<a href="/Home/profile">Profil</a>
+                    <a href="/Home/logout"><i style="margin-right: 5px" class="far fa-user" aria-hidden="true"></i> Çıkış Yap</a>
+                }
+                else
+                    {
+                <a href="/Home/login"><i style="margin-right: 5px" class="far fa-user" aria-hidden="true"></i>Giris Yap</a>
+                    }
+                }
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <!-- End Header -->
+
+  <!-- Upcoming payment Section  -->
+  <section id="category">
+    <div class="category container">
+        @model IEnumerable<paymentid>
+        @foreach(var item in Model)
+        {
+      <form action="/Home/paymentsuccessfull/@item.id/@item.category_id" method = "POST">
+
+        <div class="container">
+          <div class="payment">
+            <div class="fatura-icon">
+              <div class="fatura">
+                <h1 class="info">Fatura</h1>
+              </div>
+              <i class="fas fa-file-invoice"></i>
+            </div>
+            <div class="name">
+              <label class="font">Adınız</label>
+              <input type="text" name="name" style="padding-top: 7px" placeholder="Adınız"  />
+              <p>@item.category_id</p>
+            </div>
+            <div class="mail" style="margin-bottom: 2rem">
+              <label class="font">Mail Adresiniz</label>
+              <input type="text" name="email" style="padding-top: 7px" placeholder="Mail adresiniz"  />
+            </div>
+            <div class="icon-card">
+              <div class="card">
+                <h1 class="info">Kart Bilgileri</h1>
+              </div>
+              <i class="far fa-credit-card"></i>
+            </div>
+            <div class="card-owner">
+              <label class="font">Kart Sahibinin İsmi</label>
+              <input type="text" name="card-owner" style="padding-top: 7px" placeholder="Kart sahibinin ismi"
+                 />
+            </div>
+            <div class="card-no">
+              <label class="font">Kart numaranız</label>
+              <input maxlength="16" type="text" name="card-no" style="padding-top: 7px" placeholder="Kart numaranız"
+                 />
+            </div>
+            <div class="ay-yıl-cvv">
+              <div class="ay">
+                <label class="font">Ay</label>
+                <input maxlength="2" type="text" name="ay" style="padding-top: 7px" placeholder="Ay"  />
+              </div>
+              <div class="yıl">
+                <label class="font">Yıl</label>
+                <input maxlength="2" type="text" name="yıl" style="padding-top: 7px" placeholder="Yıl"  />
+              </div>
+              <div class="cvv">
+                <label class="font">CVV</label>
+                <input maxlength="3" type="text" name="cvv" style="padding-top: 7px" placeholder="CVV"  />
+              </div>
+            </div>
+            <div class="öde">
+              <div class="button-part">
+                <button type="submit" class="submit-button">
+                  Ödemeyi Tamamla
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+      }
+    </div>
+  </section>
+  <!-- End payment Section       -->
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="section aboutus">
+        <h2>Biz Kimiz</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
+          animi ea dolorum minima? Maiores corporis quisquam, perferendis
+          pariatur sit laudantium?
+        </p>
+        <ul class="sci">
+          <li>
+            <a href="https://www.google.com/"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+          </li>
+          <li>
+            <a href="https://www.google.com/"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+          </li>
+          <li>
+            <a href="https://www.google.com/"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+          </li>
+        </ul>
+        <p style="font-size: 14px; padding-top: 20px">
+          2021 COBADO.Bütün hakları Gizlidir
+        </p>
+      </div>
+      <div class="section Navigation">
+        <h2>Navigasyon</h2>
+        <ul>
+          <li><a href="/Home/about_us">Hakkımızda</a></li>
+          <li><a href="/Home/FAQ">Sıkça Sorulanlar</a></li>
+          <li><a href="/Home/security">Gizlilik Politikası</a></li>
+          <li><a href="/Home/contact_us">Bize Ulaşın</a></li>
+        </ul>
+      </div>
+      <div class="section Contact">
+        <h2>Haberdar olun</h2>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit,
+          ducimus.
+        </p>
+        <form action="">
+          <input type="text" id="Email" name="Email" placeholder="Email Giriniz" />
+          <input type="submit" value="Gönder" />
+        </form>
+      </div>
+    </div>
+  </footer>
+  <!-- End Footer Section -->
+  <script src="/hb.js"></script>
+</body>
+
+</html>

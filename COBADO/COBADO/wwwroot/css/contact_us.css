@@ -1,0 +1,184 @@
+.contacts h2{
+    text-align: center;
+    padding: 5% 0%;
+    background-image: url(./images/Screenshot_3.jpg);
+    font-size: 46px;
+    color: #f2f3f9;
+}
+.leftsideinfo .divider {
+    margin-top: 30px;
+  background: #83b4d0;
+  height: 3px;
+  max-width: 80px;
+ margin-bottom: 2%;
+}
+.outside-wrap{
+  width: 75%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.inside-wrap{
+    justify-content: space-between !important;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+
+}
+.leftsideinfo{
+    flex: 0 0 60%;
+    max-width: 60%;
+}
+.col-md-6{
+    display: flex;
+    flex-direction: column;
+    flex:  0 0 50%;
+    width: 50%;
+    justify-content: center;
+   
+    
+    
+}
+.form-wrap{
+    background-color: #e7f0f5;
+    border-radius: 1.25rem;
+    padding: 5%;
+}
+.col-md-6 label{
+    margin: 10px 0 10px 30px;
+}
+form input{
+    box-shadow: none;
+    display: block;
+    width: 85%;
+    min-height: 60px;
+    padding: 18px 25px;
+    font-weight: 300;
+    line-height: 24px;
+    color: #293238;
+    background-color: #f2f3f9;
+    background-image: none;
+    border: 0px solid #f2f3f9;
+    border-radius: 35px;
+    -webkit-appearance: none;
+}
+.col-sm-12{
+    margin-top: 2%;
+}
+.col-sm-12 label{
+    margin: 10px 0 10px 30px;
+}
+.col-sm-12 input{
+    width: 93% !important;
+}
+.col-sm-12 input{
+    margin-top: 10px;
+}
+.buttonbottom button{
+    margin-top: 10px;
+    margin-left: 25px;
+    width: 50%;
+    background: linear-gradient(
+  -45deg, #fab131 0%, #f17849);
+      border: none;
+      color: #ffffff;
+      transition: 0.33s all linear;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-align: center;
+}
+.buttonbottom button:hover{
+    background: rgb(190, 114, 114);
+}
+.buttonbottom{
+margin-top: 2%;
+width: 60%;
+    text-align: start;
+}
+.rightsideinfo{
+    flex: 0 0 30%;
+    max-width: 30%;
+    display: flex;
+}
+.rightsidewrap{
+    display: flex;
+}
+.rightsiderow{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.col-sm-10 h6{
+    font-size: 26px;
+    margin-bottom: 8px;
+}
+.col-sm-10 hr{
+    line-height: 2px;
+    margin-bottom: 8px;
+}
+.col-sm-10 p{
+    width: 70%;
+}
+.word{
+    display: flex;
+    margin-top: 5%;
+}
+.word span{
+    margin-right: 20px;
+}
+@media only screen and (max-width: 900px) {
+    .inside-wrap{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .leftsideinfo{
+        max-width: 100%;
+    }
+    .rightsideinfo{
+        width: 100% !important;
+        margin-top: 5%;
+    }
+    section{
+        height: auto !important;
+    }
+    .col-sm-10{
+        margin-bottom: 4%;
+    }
+    .buttonbottom{
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+    .outside-wrap{
+        width: 100%;
+    }
+  }
+  @media only screen and (max-width: 900px) {
+   .topside{
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+   }
+   .bottomsideform{
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+   }
+   .leftsideinfo{
+       max-width: 75%;
+   }
+   .col-md-6{
+       width: 100%;
+   }
+
+
+}

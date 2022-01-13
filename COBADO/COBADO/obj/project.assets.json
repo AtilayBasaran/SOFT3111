@@ -4226,26 +4226,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\baran\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Salih Coşkun\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\baran\\Documents\\GitHub\\SOFT3111\\COBADO\\COBADO\\COBADO.csproj",
+      "projectUniqueName": "C:\\Users\\Salih Coşkun\\Documents\\GitHub\\SOFT3111\\COBADO\\COBADO\\COBADO.csproj",
       "projectName": "COBADO",
-      "projectPath": "C:\\Users\\baran\\Documents\\GitHub\\SOFT3111\\COBADO\\COBADO\\COBADO.csproj",
-      "packagesPath": "C:\\Users\\baran\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\baran\\Documents\\GitHub\\SOFT3111\\COBADO\\COBADO\\obj\\",
+      "projectPath": "C:\\Users\\Salih Coşkun\\Documents\\GitHub\\SOFT3111\\COBADO\\COBADO\\COBADO.csproj",
+      "packagesPath": "C:\\Users\\Salih Coşkun\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Salih Coşkun\\Documents\\GitHub\\SOFT3111\\COBADO\\COBADO\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\baran\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Salih Coşkun\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4298,6 +4291,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[5.0.12, 5.0.12]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -4306,7 +4305,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

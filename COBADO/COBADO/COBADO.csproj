@@ -1,0 +1,104 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <CopyRefAssembliesToPublishDirectory>false</CopyRefAssembliesToPublishDirectory>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="Views\Home\404Page.cshtml" />
+    <Content Remove="Views\Home\about_us.cshtml" />
+    <Content Remove="Views\Home\adminPanel.cshtml" />
+    <Content Remove="Views\Home\all_event.cshtml" />
+    <Content Remove="Views\Home\buy_page.cshtml" />
+    <Content Remove="Views\Home\categories.cshtml" />
+    <Content Remove="Views\Home\contact_us.cshtml" />
+    <Content Remove="Views\Home\events.cshtml" />
+    <Content Remove="Views\Home\FAQ.cshtml" />
+    <Content Remove="Views\Home\index.cshtml" />
+    <Content Remove="Views\Home\login.cshtml" />
+    <Content Remove="Views\Home\music.cshtml" />
+    <Content Remove="Views\Home\ownerEvent.cshtml" />
+    <Content Remove="Views\Home\ownerPanel.cshtml" />
+    <Content Remove="Views\Home\payment.cshtml" />
+    <Content Remove="Views\Home\profile.cshtml" />
+    <Content Remove="Views\Home\register.cshtml" />
+    <Content Remove="Views\Home\security.cshtml" />
+    <Content Remove="Views\Home\sport.cshtml" />
+    <Content Remove="Views\Home\succcesPage.cshtml" />
+    <Content Remove="Views\Home\talk.cshtml" />
+    <Content Remove="Views\Home\theatre.cshtml" />
+    <Content Remove="wwwroot\css\images\404.png" />
+    <Content Remove="wwwroot\css\images\concertsmoke.jpg" />
+    <Content Remove="wwwroot\css\images\icons8-concert-day-48.png" />
+    <Content Remove="wwwroot\css\images\icons8-family-40.png" />
+    <Content Remove="wwwroot\css\images\icons8-minus-24.png" />
+    <Content Remove="wwwroot\css\images\icons8-minus-64.png" />
+    <Content Remove="wwwroot\css\images\icons8-plus-+-24.png" />
+    <Content Remove="wwwroot\css\images\icons8-plus-+-64.png" />
+    <Content Remove="wwwroot\css\images\icons8-sports-64.png" />
+    <Content Remove="wwwroot\css\images\icons8-talk-40.png" />
+    <Content Remove="wwwroot\css\images\icons8-theatre-mask-40.png" />
+    <Content Remove="wwwroot\css\images\pexels-burst-374720.jpg" />
+    <Content Remove="wwwroot\css\images\Screenshot_1.jpg" />
+    <Content Remove="wwwroot\css\images\Screenshot_2.jpg" />
+    <Content Remove="wwwroot\css\images\Screenshot_3.jpg" />
+    <Content Remove="wwwroot\css\images\Screenshot_4.jpg" />
+    <Content Remove="wwwroot\css\images\Screenshot_5.jpg" />
+    <Content Remove="wwwroot\css\images\Screenshot_6.jpg" />
+    <Content Remove="wwwroot\css\images\Screenshot_9.jpg" />
+    <Content Remove="wwwroot\css\images\vettel.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\Home\404Page.cshtml" />
+    <None Include="Views\Home\about_us.cshtml" />
+    <None Include="Views\Home\adminPanel.cshtml" />
+    <None Include="Views\Home\all_event.cshtml" />
+    <None Include="Views\Home\buy_page.cshtml" />
+    <None Include="Views\Home\categories.cshtml" />
+    <None Include="Views\Home\contact_us.cshtml" />
+    <None Include="Views\Home\events.cshtml" />
+    <None Include="Views\Home\FAQ.cshtml" />
+    <None Include="Views\Home\index.cshtml" />
+    <None Include="Views\Home\login.cshtml" />
+    <None Include="Views\Home\music.cshtml" />
+    <None Include="Views\Home\ownerEvent.cshtml" />
+    <None Include="Views\Home\ownerPanel.cshtml" />
+    <None Include="Views\Home\payment.cshtml" />
+    <None Include="Views\Home\profile.cshtml" />
+    <None Include="Views\Home\security.cshtml" />
+    <None Include="Views\Home\sport.cshtml" />
+    <None Include="Views\Home\succcesPage.cshtml" />
+    <None Include="Views\Home\talk.cshtml" />
+    <None Include="Views\Home\theatre.cshtml" />
+    <None Include="wwwroot\css\images\404.png" />
+    <None Include="wwwroot\css\images\concertsmoke.jpg" />
+    <None Include="wwwroot\css\images\icons8-concert-day-48.png" />
+    <None Include="wwwroot\css\images\icons8-family-40.png" />
+    <None Include="wwwroot\css\images\icons8-minus-24.png" />
+    <None Include="wwwroot\css\images\icons8-minus-64.png" />
+    <None Include="wwwroot\css\images\icons8-plus-+-24.png" />
+    <None Include="wwwroot\css\images\icons8-plus-+-64.png" />
+    <None Include="wwwroot\css\images\icons8-sports-64.png" />
+    <None Include="wwwroot\css\images\icons8-talk-40.png" />
+    <None Include="wwwroot\css\images\icons8-theatre-mask-40.png" />
+    <None Include="wwwroot\css\images\pexels-burst-374720.jpg" />
+    <None Include="wwwroot\css\images\Screenshot_1.jpg" />
+    <None Include="wwwroot\css\images\Screenshot_2.jpg" />
+    <None Include="wwwroot\css\images\Screenshot_3.jpg" />
+    <None Include="wwwroot\css\images\Screenshot_4.jpg" />
+    <None Include="wwwroot\css\images\Screenshot_5.jpg" />
+    <None Include="wwwroot\css\images\Screenshot_6.jpg" />
+    <None Include="wwwroot\css\images\Screenshot_9.jpg" />
+    <None Include="wwwroot\css\images\vettel.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="5.0.13" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="6.0.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
+    <PackageReference Include="System.Net.Http" Version="4.3.4" />
+  </ItemGroup>
+
+</Project>

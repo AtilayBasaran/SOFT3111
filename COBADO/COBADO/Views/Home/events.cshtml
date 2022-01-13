@@ -1,0 +1,167 @@
+@using COBADO.Models
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/stylee.css">
+    <link rel="stylesheet" href="/css/event.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <title>EventPage</title>
+    <script src="/mainspageslider.js"></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="navbar">
+            <div class="topnavbar">
+                <ul>
+                    <li>
+                        <a href="/Home/sport">Spor</a>
+                        <a href="/Home/theatre">Tiyatro</a>
+                        <a href="/Home/theatre">Müzik</a>
+                        <a href="/Home/categories">Tüm kategoriler</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="bottomnavbar">
+                <label style="display: flex; align-items: center; justify-content: center" class="logo"><a
+                        style="text-decoration: none; color: black" href="/Home/index">COBADO</a>
+                </label>
+              <div class="form">
+                <form method="POST" action="bar" style="display: flex;flex-direction: row;width: 80%;margin-top: 10px;justify-content: center;">
+                <input type="text" id="EventName" name="EventName" placeholder="Search" />
+                <button type="submit">Ara</button>
+                </form>
+            </div>
+                <ul>
+                    <li>
+                        <a href="/Home/index">Anasayfa</a>
+                        <a href="/Home/all_event">Etkinlikler</a>
+                        @{
+                    if (Context.Request.Cookies["name"] != null)
+                {<a href="/Home/profile">Profil</a>
+                    <a href="/Home/logout"><i style="margin-right: 5px" class="far fa-user" aria-hidden="true"></i> Çıkış Yap</a>
+                }
+                else
+                    {
+                <a href="/Home/login"><i style="margin-right: 5px" class="far fa-user" aria-hidden="true"></i>Giris Yap</a>
+                    }
+                }
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- End Header -->
+    <!-- Mid Part-->
+    <section id="container-part">
+
+        @model EventViewModel 
+            @foreach (eventDetail detail in Model.eventDetails)
+            {
+        <div class="video-part">
+            <iframe width="560" height="315" src="@detail.videoUrl"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            <div class="place-calendar">
+                <div class="place">
+                    <i class="fas fa-map-marker-alt" style="padding-right: 8px;"></i>
+                    <p>@detail.EventPlace</p>
+                </div>
+                <div class="calendar">
+                    <i class="far fa-calendar-alt" style="padding-right: 8px;"></i>
+                    <p>@detail.EventDate</p>
+                </div>
+            </div>
+        </div>
+        <div class="info-part">
+
+
+            <form action="/Home/payment/@detail.EventID" method = "POST">
+            <h3 class="title">@detail.EventSummary</h3>
+            <p>@detail.EventFull</p>
+            <br>
+            <div class="choose">
+                <div class="bilet-secme">
+                    <b>Bilet adedi seçiniz</b>
+                    
+                </div>
+                <div class="kategori-secme">
+                    <b>Kategori seçiniz</b>
+                    
+                    <select name="placeTicket">
+                        <div class="scroll" style="size: 5;">
+                            <label for="number"></label>
+                        @foreach (eventCategory categ in Model.eventCategories)
+                    {    
+                            <option name="chooice" value = "@categ.category_id">@categ.category_type</option>
+                    }
+                        </div>
+                    </select>
+                    
+                </div>
+            </div>
+            <br>
+            <button class="box-1" type ="submit" >Satın al  </button>
+            </form>
+            
+        </div>
+        }
+    </section>
+    <!-- End Mid Part-->
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="section aboutus">
+                <h2>Biz Kimiz</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
+                    animi ea dolorum minima? Maiores corporis quisquam, perferendis
+                    pariatur sit laudantium?
+                </p>
+                <ul class="sci">
+                    <li>
+                        <a href="https://www.google.com/"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.google.com/"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.google.com/"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                    </li>
+                </ul>
+                <p style="font-size: 14px; padding-top: 20px">
+                    2021 COBADO.Bütün hakları Gizlidir
+                </p>
+            </div>
+            <div class="section Navigation">
+                <h2>Navigasyon</h2>
+                <ul>
+                    <li><a href="/Home/about_us">Hakkımızda</a></li>
+                    <li><a href="/Home/FAQ">Sıkça Sorulanlar</a></li>
+                    <li><a href="/Home/security">Gizlilik Politikası</a></li>
+                    <li><a href="/Home/contact_us">Bize Ulaşın</a></li>
+                </ul>
+            </div>
+            <div class="section Contact">
+                <h2>Haberdar olun</h2>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit,
+                    ducimus.
+                </p>
+                <form action="">
+                    <input type="text" id="Email" name="Email" placeholder="Email Giriniz" />
+                    <input type="submit" value="Gönder" />
+                </form>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer Section -->
+</body>
+
+</html>

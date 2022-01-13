@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="~/css/stylee.css" />
+  <link rel="stylesheet" href="~/css/styleindex.css" />
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+  <title>Anasayfa</title>
+  <header>
+    <div class="navbar">
+        <div class="topnavbar">
+            <ul>
+                <li>
+                    <a href="/Home/sport">Spor</a>
+                    <a href="/Home/theatre">Tiyatro</a>
+                    <a href="/Home/music">Müzik</a>
+                    <a href="/Home/categories">Tüm kategoriler</a>
+                </li>
+            </ul>
+        </div>
+        <div class="bottomnavbar">
+            <label style="display: flex; align-items: center; justify-content: center" class="logo"><a
+                    style="text-decoration: none; color: black" href="/Home/index">COBADO</a>
+            </label>
+            <div class="form">
+                <form method="POST" action="bar" style="display: flex;flex-direction: row;width: 80%;margin-top: 10px;justify-content: center;">
+                <input type="text" id="EventName" name="EventName" placeholder="Search" />
+                <button type="submit">Ara</button>
+                </form>
+            </div>
+            <ul>
+                <li>
+                    <a href="/Home/index">Anasayfa</a>
+                    <a href="/Home/all_event">Etkinlikler</a>
+                    @{
+                    if (Context.Request.Cookies["name"] != null)
+                {<a href="/Home/profile">Profil</a>
+                    <a href="/Home/logout"><i style="margin-right: 5px" class="far fa-user" aria-hidden="true"></i> Çıkış Yap</a>
+                }
+                else
+                    {
+                <a href="/Home/login"><i style="margin-right: 5px" class="far fa-user" aria-hidden="true"></i>Giris Yap</a>
+                    }
+                }
+                    
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</header>
+</head>
+<body>
+  <section>
+    <div class="firstrow">
+      <div class="leftside">
+        <div class="infosectionleft">
+          <div class="infoleft">
+            <p style="font-size: 24px;
+    font-weight: 500;">28 Aralık 2021</p>
+            <div class="decorateleft">
+              <h1 style="font-size:34px">Yeni Yılı Birlikte Kutluyalım</h1>
+              <!-- <spanc class="showleft">Etkinlik</spanc> -->
+            </div>
+            <p class="longtextleft">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla,
+              quod?
+            </p>
+            <a class="buttonleft" href="/Home/events"><button>Satın al</button></a>
+          </div>
+          <div class="infolright">
+            <img src="~/css/images/Screenshot_6.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="rightside">
+        <div class="inforightside">
+          <div class="righttop">
+            <div class="righttopimg">
+              <img src="~/css/images/Screenshot_9.jpg" alt="" />
+            </div>
+            <div class="righttopinfo">
+                <a class=" namerightt"> Sanat Galerisi</a>
+              <p>14 Mayıs 2022</p>
+              <p>300 TL</p>
+              <button><a href="/Home/events">Satın al</a></button>
+            </div>
+          </div>
+          <div class="rightbottom">
+            <div class="rightbottomimg">
+              <img src="~/css/images/Screenshot_9.jpg" alt="" />
+            </div>
+            <div class="rightbottominfo">
+              <a class="namerightb">Sanat Galerisi</a>
+              <p>14 Mayıs 2022</p>
+              <p>300 TL</p>
+              <button><a href="/Home/events">Satın al</a></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="body-middle">
+    <div class="bodymiddle">
+      <div class="blockcenter">Her türden Etkinliğe Bilet Alın</div>
+      <div class="circleevetns">
+        <div class="elements">
+          <div class="wrapelements">
+            <div class="elemtentsuppper">
+              <span class="icon"><img src="/css/images/icons8-sports-64.png" alt=""></i></span>
+            </div>
+            <div class="elementsbottom">
+              <h5>Spor Etkinlikleri</h5>
+              <hr class="divider" />
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Quidem esse, earum dicta veritatis reiciendis dolore?
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="elements">
+          <div class="wrapelements">
+            <div class="elemtentsuppper">
+              <span class="icon"><img src="/css/images/icons8-theatre-mask-40.png" alt=""></i></span>
+            </div>
+            <div class="elementsbottom">
+              <h5>Tiyatrolar</h5>
+              <hr class="divider" />
+              <label>@ViewBag.message</label>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Quidem esse, earum dicta veritatis reiciendis dolore?
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="elements">
+          <div class="wrapelements">
+            <div class="elemtentsuppper">
+              <span class="icon"><img src="/css/images/icons8-concert-day-48.png" alt=""></i></span>
+            </div>
+            <div class="elementsbottom">
+              <h5>Konserler</h5>
+              <hr class="divider" />
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Quidem esse, earum dicta veritatis reiciendis dolore?
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="elements">
+          <div class="wrapelements">
+            <div class="elemtentsuppper">
+              <span class="icon"><img src="/css/images/icons8-talk-40.png" alt=""></i></span>
+            </div>
+            <div class="elementsbottom">
+              <h5>Konuşmalar</h5>
+              <hr class="divider" />
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Quidem esse, earum dicta veritatis reiciendis dolore?
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="events">
+    <div class="containerevents">
+      <div class="boxyear">
+        <h3>Popüler Etkinlikler</h3>
+        <div class="boxs"><span class="box-decorate">2022</span></div>
+      </div>
+      <div class="eventsrow">
+        <div class="firstrowtop">
+          <div class="prodcut">
+            <div class="topside">
+              <h3>14 Ocak 2022 22:00</h3>
+            </div>
+            <a href=""><img src="/css/images/Screenshot_5.jpg" alt=""></a>
+            <h5 class="bottominfo">Sanat Galerisi</h5>
+            <p>200 TL</p>
+            <div class="productbutton">
+              <a href="/Home/events"><button>Şimdi Satın Al</button>
+              </a>
+            </div>
+          </div>
+          <div class="prodcut">
+            <div class="topside">
+              <h3>14 Ocak 2022 22:00</h3>
+            </div>
+            <a href=""><img src="/css/images/Screenshot_4.jpg" alt=""></a>
+            <h5 class="bottominfo"></h5>
+            <p>200 TL</p>
+            <div class="productbutton">
+              <a href="/Home/events"><button>Şimdi Satın Al</button>
+              </a>
+            </div>
+          </div>
+          <div class="prodcut">
+            <div class="topside">
+              <h3>14 Ocak 2022 22:00</h3>
+            </div>
+            <a href="/Home/events"><img src="/css/images/Screenshot_5.jpg" alt=""></a>
+            <h5 class="bottominfo">Sanat Galerisi</h5>
+            <p>200 TL</p>
+            <div class="productbutton">
+              <a href="/Home/events"><button>Şimdi Satın Al</button>
+              </a>
+            </div>
+          </div>
+          <div class="prodcut">
+            <div class="topside">
+              <h3>14 Ocak 2022 22:00</h3>
+            </div>
+            <a href="/Home/events"><img src="/css/images/Screenshot_4.jpg" alt=""></a>
+            <h5 class="bottominfo">Sanat Galerisi</h5>
+            <p>200 TL</p>
+            <div class="productbutton">
+              <a href=""><button>Şimdi Satın Al</button>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="secondrow">
+          <div class="prodcut">
+            <div class="topside">
+              <h3>14 Ocak 2022 22:00</h3>
+            </div>
+            <a href="/Home/events"><img src="/css/images/Screenshot_5.jpg" alt=""></a>
+            <h5 class="bottominfo"> Sanat Galerisi</h5>
+            <p>200 TL</p>
+            <div class="productbutton">
+              <a href="/Home/events"><button>Şimdi Satın Al</button>
+              </a>
+            </div>
+          </div>
+          <div class="prodcut">
+            <div class="topside">
+              <h3>14 Ocak 2022 22:00</h3>
+            </div>
+            <a href="/Home/events"><img src="/css/images/Screenshot_4.jpg" alt=""></a>
+            <h5 class="bottominfo">Sanat Galerisi</h5>
+            <p>200 TL</p>
+            <div class="productbutton">
+              <a href="/Home/events"><button>Şimdi Satın Al</button>
+              </a>
+            </div>
+          </div>
+          <div class="prodcut">
+            <div class="topside">
+              <h3>14 Ocak 2022 22:00</h3>
+            </div>
+            <a href="/Home/events"><img src="/css/images/Screenshot_5.jpg" alt=""></a>
+            <h5 class="bottominfo">Sanat Galerisi</h5>
+            <p>200 TL</p>
+            <div class="productbutton">
+              <a href="/Home/events"><button>Şimdi Satın Al</button>
+              </a>
+            </div>
+          </div>
+          <div class="prodcut">
+            <div class="topside">
+              <h3>14 Ocak 2022 22:00</h3>
+            </div>
+            <a href="/Home/events"><img src="/css/images/Screenshot_5.jpg" alt=""></a>
+            <h5 class="bottominfo">Sanat Galerisi</h5>
+            <p>200 TL</p>
+            <div class="productbutton">
+              <a href="/Home/events"><button>Şimdi Satın Al</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cont">
+
+
+        <a class="viewevents" href="/Home/all_event"><button>Bütün Etkinlikler</button></a> </div>
+    </div>
+  </section>
+  <footer style="margin-top: 0 !important; margin-bottom:0 !important">
+    <div class="container">
+      <div class="section aboutus">
+        <h2>Biz Kimiz</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
+          animi ea dolorum minima? Maiores corporis quisquam, perferendis
+          pariatur sit laudantium?
+        </p>
+        <ul class="sci">
+          <li>
+              <a href="https://www.google.com/"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+          </li>
+          <li>
+              <a href="https://www.google.com/"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+          </li>
+          <li>
+              <a href="https://www.google.com/"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+          </li>
+      </ul>
+      <p style="font-size: 14px; padding-top: 20px">
+          2021 COBADO.Bütün hakları Gizlidir
+      </p>
+  </div>
+  <div class="section Navigation">
+      <h2>Navigasyon</h2>
+      <ul>
+          <li><a href="/Home/about_us">Hakkımızda</a></li>
+          <li><a href="/Home/FAQ">Sıkça Sorulanlar</a></li>
+          <li><a href="/Home/security">Gizlilik Politikası</a></li>
+          <li><a href="/Home/contact_us">Bize Ulaşın</a></li>
+      </ul>
+      </div>
+      <div class="section Contact">
+        <h2>Haberdar olun</h2>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit,
+          ducimus.
+        </p>
+        <form action="">
+          <input type="text" id="Email" name="Email" placeholder="Email Giriniz" />
+          <input type="submit" value="Gönder" />
+        </form>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

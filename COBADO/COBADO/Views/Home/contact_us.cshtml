@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/stylee.css" />
+    <link rel="stylesheet" href="/css/contact_us.css" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+
+    <title>İletişim</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="navbar">
+          <div class="topnavbar">
+              <ul>
+                  <li>
+                      <a href="/Home/sport">Spor</a>
+                      <a href="/Home/theatre">Tiyatro</a>
+                      <a href="/Home/theatre">Müzik</a>
+                      <a href="/Home/categories">Tüm kategoriler</a>
+                  </li>
+              </ul>
+          </div>
+          <div class="bottomnavbar">
+              <label style="display: flex; align-items: center; justify-content: center" class="logo"><a
+                      style="text-decoration: none; color: black" href="/Home/index">COBADO</a>
+              </label>
+             <div class="form">
+                <form method="POST" action="bar" style="display: flex;flex-direction: row;width: 80%;margin-top: 10px;justify-content: center;">
+                <input type="text" id="EventName" name="EventName" placeholder="Search" />
+                <button type="submit">Ara</button>
+                </form>
+            </div>
+              <ul>
+                  <li>
+                      <a href="/Home/index">Anasayfa</a>
+                      <a href="/Home/all_event">Etkinlikler</a>
+                      @{
+                    if (Context.Request.Cookies["name"] != null)
+                {<a href="/Home/profile">Profil</a>
+                    <a href="/Home/logout"><i style="margin-right: 5px" class="far fa-user" aria-hidden="true"></i> Çıkış Yap</a>
+                }
+                else
+                    {
+                <a href="/Home/login"><i style="margin-right: 5px" class="far fa-user" aria-hidden="true"></i>Giris Yap</a>
+                    }
+                }
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </header>
+    <section class="photo">
+      <div class="contacts"><h2>İletişim</h2></div>
+    </section>
+    <section style="margin-top: 5%; height: 65vh">
+      <div class="outside-wrap">
+        <div class="inside-wrap">
+          <div class="leftsideinfo">
+            <h3>Bize ulaş</h3>
+            <hr class="divider" />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. In,
+              aspernatur!
+            </p>
+
+
+            <form style="margin-top: 5%" action="/Home/sendMail">
+              <div class="form-wrap">
+                <div style="display: flex" class="topside">
+                  <div class="col-md-6">
+                    <label for="First Name">İsim</label>
+                    <input type="text" placeholder="firstname" id ="firstname" name="firstname" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="Last Name">Soyisim</label>
+                    <input type="text" placeholder="Soyisim" id ="lastname" name="lastname" required>
+                  </div>
+                </div>
+                <div style="display: flex" class="bottomsideform">
+                  <div class="col-md-6">
+                    <label for="email">Email</label>
+                    <input type="text" placeholder="E-Mail" id ="email" name="email" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="subject">Konu</label>
+                    <input type="text" placeholder="Konu" id ="subject" name="subject" required>
+                  </div>
+                </div>
+
+                <div class="col-sm-12">
+                  <label for="your message">Mesajınız</label>
+                  <input type="text" placeholder="Mesajınız" id ="message" name="message" required>
+                </div>
+                <div class="buttonbottom">
+                  <button type="submit">Gönder</button>
+                </div>
+              </div>
+            </form>
+
+
+          </div>
+          <div class="rightsideinfo">
+            <div class="rightsidewrap">
+              <div class="rightsiderow">
+                <div class="col-sm-10">
+                  <h6>Adres</h6>
+                  <hr class="divid" />
+                  <div class="word">
+                    <span class="icon"
+                      ><i class="fab fa-twitter" aria-hidden="true"></i
+                    ></span>
+                    <p>
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Explicabo, et?
+                    </p>
+                  </div>
+                </div>
+                <div class="col-sm-10">
+                  <h6>Adres</h6>
+                  <hr class="divid" />
+                  <div class="word">
+                    <span class="icon"
+                      ><i class="fab fa-twitter" aria-hidden="true"></i
+                    ></span>
+                    <p>
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Explicabo, et?
+                    </p>
+                  </div>
+                </div>
+                <div class="col-sm-10">
+                  <h6>Adres</h6>
+                  <hr class="divid" />
+                  <div class="word">
+                    <span class="icon"
+                      ><i class="fab fa-twitter" aria-hidden="true"></i
+                    ></span>
+                    <p>
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Explicabo, et?
+                    </p>
+                  </div>
+                </div>
+                <div class="col-sm-10">
+                  <h6>Adres</h6>
+                  <hr class="divid" />
+                  <div class="word">
+                    <span class="icon"
+                      ><i class="fab fa-twitter" aria-hidden="true"></i
+                    ></span>
+                    <p>
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Explicabo, et?
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <div class="section aboutus">
+          <h2>Biz Kimiz</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
+            animi ea dolorum minima? Maiores corporis quisquam, perferendis
+            pariatur sit laudantium?
+          </p>
+          <ul class="sci">
+            <li>
+                <a href="https://www.google.com/"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+            </li>
+            <li>
+                <a href="https://www.google.com/"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+            </li>
+            <li>
+                <a href="https://www.google.com/"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+            </li>
+        </ul>
+        <p style="font-size: 14px; padding-top: 20px">
+            2021 COBADO.Bütün hakları Gizlidir
+        </p>
+    </div>
+    <div class="section Navigation">
+        <h2>Navigasyon</h2>
+        <ul>
+            <li><a href="/Home/about_us">Hakkımızda</a></li>
+            <li><a href="/Home/FAQ">Sıkça Sorulanlar</a></li>
+            <li><a href="/Home/security">Gizlilik Politikası</a></li>
+            <li><a href="/Home/contact_us">Bize Ulaşın</a></li>
+        </ul>
+        </div>
+        <div class="section Contact">
+          <h2>Haberdar olun</h2>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit,
+            ducimus.
+          </p>
+          <form action="">
+            <input
+              type="text"
+              id="Email"
+              name="Email"
+              placeholder="Email Giriniz"
+            />
+            <input type="submit" value="Gönder" />
+          </form>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
